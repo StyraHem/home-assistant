@@ -1,4 +1,6 @@
-"""Support for Shelly devices."""
+"""
+Component for Shelly smart home devices.
+"""
 from datetime import timedelta
 import logging
 
@@ -183,7 +185,7 @@ def setup(hass, config):
         for _, block in pys.blocks.items():
             block.update_status_information()
 
-    async def update_domain_callback():
+    async def update_domain_callback(_now):
         """Update the Shelly status information"""
         await hass.async_add_executor_job(update_status_information)
 

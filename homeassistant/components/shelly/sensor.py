@@ -7,12 +7,13 @@ https://home-assistant.io/components/shelly/
 
 import logging
 
-from homeassistant.const import (
-    DEVICE_CLASS_HUMIDITY, DEVICE_CLASS_TEMPERATURE, TEMP_CELSIUS, POWER_WATT)
+from homeassistant.const import (DEVICE_CLASS_HUMIDITY,
+                                 DEVICE_CLASS_TEMPERATURE,
+                                 TEMP_CELSIUS, POWER_WATT)
 from homeassistant.helpers.entity import Entity
 
-from . import (
-    CONF_OBJECT_ID_PREFIX, SHELLY_CONFIG, ShellyDevice, get_device_from_hass)
+from . import (CONF_OBJECT_ID_PREFIX, SHELLY_CONFIG,
+               ShellyDevice, get_device_from_hass)
 
 _LOGGER = logging.getLogger(__name__)
 
